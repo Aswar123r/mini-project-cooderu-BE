@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "f2d94079-f897-4fde-81ec-22a2d35ad1c9",
+		"name": "mini_project",
+		"description": "dokumentasi api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\" : \"Aswar\", \r\n    \"email\" : \"1234@gmail.com\", \r\n    \"gender\" : \"laki-laki\", \r\n    \"phone_number\" : \"085123456789\", \r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOSTM}}api/users/register",
+							"host": [
+								"{{HOSTM}}api"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOSTM}}api/users/login",
+							"host": [
+								"{{HOSTM}}api"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjcyNjc3MDU4fQ.qJxeUAuSqXj6n7HsEjVNtUm1tU_Pv6IivrwAfc4aeUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOSTM}}api/users/balance",
+							"host": [
+								"{{HOSTM}}api"
+							],
+							"path": [
+								"users",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjcyNjc3MDU4fQ.qJxeUAuSqXj6n7HsEjVNtUm1tU_Pv6IivrwAfc4aeUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjczMDA5MDE0fQ.-DtlgFK1greuEMsVKu0wBwXAWp_q1K7HFj4li_RWyXI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\" : \"Aswarwww\", \r\n    \"email\" : \"aswar1@gmail.com\", \r\n    \"gender\" : \"laki-laki\", \r\n    \"phone_number\" : \"085123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjczMDA5NDMyfQ.iVJKylVHTgpMc8zGW8O5v7iFDJM_CDe-r6pOZ66xN5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"reh kotak\",\r\n    \"price\" : 115,\r\n    \"stock\" : 100,\r\n    \"description\" : \"asdfghhgfdsa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjcyNzE1MDA2fQ.30X6tvvDnlhSlpnCB7P49wUqmjqvsSkr6_KU3WmjGmI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by price",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjcyNzU2ODgwfQ.RolI0DFUSEQLNrOm_SAvLZOJimwZQvNyEXhhDzWqmKo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "112",
+									"disabled": true
+								},
+								{
+									"key": "min",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "11",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjczMDA5NDMyfQ.iVJKylVHTgpMc8zGW8O5v7iFDJM_CDe-r6pOZ66xN5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjczMDA5NDMyfQ.iVJKylVHTgpMc8zGW8O5v7iFDJM_CDe-r6pOZ66xN5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"reh kotak12345\",\r\n    \"price\" : 11,\r\n    \"stock\" : 101,\r\n    \"description\" : \"aswar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "topup",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjczNDIxMTA0fQ.JYNmMX5L7wNLade6ky71Ok_-HBGY3PyizgLo8LXdPEc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 2,\r\n    \"balance\" : 2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOSTM}}api/admin/topup",
+							"host": [
+								"{{HOSTM}}api"
+							],
+							"path": [
+								"admin",
+								"topup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add seller",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjczNDIxMTA0fQ.JYNmMX5L7wNLade6ky71Ok_-HBGY3PyizgLo8LXdPEc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOSTM}}api/admin/seller/2",
+							"host": [
+								"{{HOSTM}}api"
+							],
+							"path": [
+								"admin",
+								"seller",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaksi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNjczMDA5OTMzfQ.pkxa7ssEIIKYLe9ZRodw23EVwuUjH-nqGi6oDnAOVk8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\" : 9,\r\n    \"quantity\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
